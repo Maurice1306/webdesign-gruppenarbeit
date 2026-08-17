@@ -1,28 +1,177 @@
 <!DOCTYPE html>
 <html lang="de">
-<!-- metadaten -->
+<!--metadata-->
 <head>
-    <title>XHTML</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="description" content="Eine Seite ueber die Formel 1" />
-    <meta name="keywords" content="Formel 1, CSS, WI_WS24-II" />
-    <meta name="robots" content="no-index" />
-    <link href="maurice.css" rel="stylesheet" type="text/css" />
-    <title>Unsere Gruppenwebseite</title>   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Harry Potter</title>
+
+    <meta name="description" content="Eine persönliche Webseite über Harry Potter">
+    <meta name="keywords" content="Harry Potter, Hogwarts, Zauberei, HTML5, CSS3">
+
+    <link href="maurice.css" rel="stylesheet">
 </head>
 
 <!-- Visible Content -->
 
 <body>
-    <div id="Wrapper">
+    <div id="wrapper">
+        <div class="background"></div>
 
-        <header>
-            
-            <h1>Die Formel 1</h1>
-            <h2>Eine Reise durch die Geschichte</h2>
+        <header class="header">
+            <img src="css/images/Harry_Potter_logo_v2.png"
+                alt="Harry Potter Logo" title="Harry Potter Logo">
 
+            <h1>Willkommen in der Welt von Harry Potter</h1>
         </header>
 
-    </div>
+        <main>
 
+            <section id="autorin" class="autorin-bereich">
+                <h2>Die Autorin</h2>
+
+                <article class="autorin-artikel">
+                    <figure class="autorin-abbildung">
+                        <img src="css/images/J.K.-Rowling.jpg.jpg">
+
+                        <figcaption>
+                            https://mubi.com/de/cast/j-k-rowling
+                        </figcaption>
+                    </figure>
+
+                    <div class="autorin-text">
+                        <h3>J. K. Rowling</h3>
+
+                        <p>Joanne. K. Rowling ist eine britische Schriftstellerin. Sie wurde 1965 in der Nähe Bristols geboren.
+                            Sie wurde vor allem als Autorin der Harry-Potter-Reihe bekannt.
+                            Die erste Geschichte über den jungen Zauberer Harry Potter erschien 1997 und entwickelte 
+                            sich zu einem weltweiten Erfolg. Insgesamt veröffentlichte Rowling sieben Harry-Potter-Romane, die in 
+                            viele Sprachen übersetzt und später auch erfolgreich verfilmt wurden.
+                            Mit ihrer fantasievollen Zauberwelt begeisterte J. K. Rowling Millionen von Leserinnen und Lesern und 
+                            prägte die moderne Fantasy-Literatur nachhaltig. Neben Harry Potter schrieb sie unter anderem weitere 
+                            Bücher, darunter die Reihe „Phantastische Tierwesen“.</p>
+                    </div>
+
+                </article>
+            </section>
+            
+            <section id="hogwarts" class="hogwarts-bereich">
+                <h2>Die Schule: Hogwarts</h2>
+
+            
+            </section>
+
+            <section id="haeuser" class="haeuser-bereich">
+                <h2>Die Häuser von Hogwarts</h2>
+
+                <div class="slider-box">
+                    <button class="slider-button prev-button" type="button" aria-label="Vorheriges Haus">
+                        Zurück
+                    </button>
+
+                    <div class="haus-slide active">
+                        <div class="haus-bild-box">
+                            <img src="css/images/gryffindor-wappen.png">
+                        </div>
+
+                        <div class="haus-text">
+                            <h3>Haus Gryffindor</h3>
+                            <p>
+                                Mut, Tapferkeit und Entschlossenheit – dafür steht das Haus Gryffindor. Gegründet wurde es von
+                                Godric Gryffindor. Das Wappen des Hauses zeigt einen Löwen, der für Stärke und Mut steht. Die 
+                                Hausfarben sind Scharlachrot und Gold.
+                                Gryffindors zeichnen sich dadurch aus, dass sie sich Herausforderungen stellen und für das 
+                                Richtige einstehen. Freundschaft, Loyalität und Zusammenhalt sind ihnen besonders wichtig.
+                                Der Gemeinschaftsraum befindet sich in einem der Türme von Hogwarts und ist durch das Porträt 
+                                der Fetten Dame erreichbar.
+                                Zu den bekanntesten Gryffindors gehören Harry Potter, Ron Weasley, Hermine Granger, Albus Dumbledore 
+                                und Minerva McGonagall.
+                                Gryffindor steht für Mut, Freundschaft und den Willen, niemals aufzugeben.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="haus-slide">
+                        <div class="haus-bild-box">
+                            <img src="css/images/ravenclaw-wappen.png">
+                        </div>
+                        
+                        <div class="haus-text">
+                            <h3>Haus Ravenclaw</h3>
+                            <p>
+                                Intelligenz, Weisheit und Kreativität – dafür steht das Haus Ravenclaw. Gegründet wurde es von 
+                                Rowena Ravenclaw. Das Wappen zeigt einen Adler, der für Wissen und Weitsicht steht. Die 
+                                Hausfarben sind Blau und Bronze.
+                                Ravenclaws lieben es, Neues zu lernen und Rätsel zu lösen. Sie sind wissbegierig, kreativ und 
+                                legen großen Wert auf kluges Denken und eigene Ideen.
+                                Der Gemeinschaftsraum befindet sich in einem Turm von Hogwarts. Um hineinzukommen, müssen die 
+                                Schüler eine knifflige Frage beantworten.
+                                Zu den bekanntesten Ravenclaws gehören Luna Lovegood, Cho Chang und Filius Flitwick.
+                                Ravenclaw steht für Wissen, Kreativität und die Freude am Lernen.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="haus-slide">
+                        <div class="haus-bild-box">
+                            <img src="css/images/huffelpuff-wappen.png">
+                        </div>
+
+                        <div class="haus-text">
+                            <h3>Haus Hufflepuff</h3>
+                            <p>
+                                Treue, Fleiß und Freundlichkeit – dafür steht das Haus Hufflepuff. Gegründet wurde es von 
+                                Helga Hufflepuff. Das Wappen zeigt einen Dachs, der für Ausdauer und Zusammenhalt steht. 
+                                Die Hausfarben sind Gelb und Schwarz.
+                                Hufflepuffs gelten als freundlich, loyal und hilfsbereit. Sie behandeln andere mit Respekt 
+                                und geben auch bei schwierigen Aufgaben nicht so schnell auf. Fairness und Zusammenhalt sind 
+                                ihnen besonders wichtig.
+                                Der Gemeinschaftsraum befindet sich in der Nähe der Küchen von Hogwarts und ist gemütlich und 
+                                einladend gestaltet.
+                                Zu den bekannten Hufflepuffs gehören Cedric Diggory, Nymphadora Tonks und Newt Scamander.
+                                Hufflepuff steht für Freundschaft, Loyalität, Fleiß und Fairness.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="haus-slide">
+                        <div class="haus-bild-box">
+                            <img src="css/images/slytherin-wappen.png">
+                        </div>
+
+                        <div class="haus-text">
+                            <h3>Haus Slytherin</h3>
+                            <p>
+                                Ehrgeiz, Zielstrebigkeit und Einfallsreichtum – dafür steht das Haus Slytherin. Gegründet 
+                                wurde es von Salazar Slytherin. Das Wappen des Hauses zeigt eine Schlange, die für List und 
+                                Stärke steht. Die Hausfarben sind Grün und Silber.
+                                Slytherins sind bekannt dafür, ihre Ziele konsequent zu verfolgen und auch in schwierigen 
+                                Situationen einen kühlen Kopf zu bewahren. Ehrgeiz, Selbstvertrauen und Entschlossenheit sind 
+                                ihnen besonders wichtig.
+                                Der Gemeinschaftsraum befindet sich in den Kerkern von Hogwarts und liegt unterhalb des Sees.
+                                Zu den bekannten Slytherins gehören Draco Malfoy, Severus Snape, Tom Riddle und 
+                                Bellatrix Lestrange.
+                                Slytherin steht für Ehrgeiz, Entschlossenheit und den Willen, seine Ziele zu erreichen.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="slider-button next-button" type="button" aria-label="Nächstes Haus">
+                        Weiter
+                    </button>
+                </div>
+
+                <div class="slider-punkte">
+                    <span class="punkt active-punkt"></span>
+                    <span class="punkt"></span>
+                    <span class="punkt"></span>
+                    <span class="punkt"></span>
+                </div>
+
+            </section>
+        </main>
+    </div>
+    <script src=maurice.js></script>
 </body>
+</html>
