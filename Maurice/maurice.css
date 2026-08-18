@@ -5,7 +5,8 @@ margin: 0;
 }
 
 body {
-	
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 1.9rem;
 }
 
 .background {
@@ -13,13 +14,13 @@ body {
 	width: 100%;
 	height: 100%;
 	
-	background-image: url("css/images/SternenhimmelV2.png");	
+	background-image: url("assets/SternenhimmelV2.png");	
 	background-size: cover;
 	background-position: center;
 
 	z-index: -1;
 
-	animation: zoom 20s infinite alternate ease-in-out;
+	animation: zoom 5s infinite alternate ease-in-out;
 }
 
 @keyframes zoom {
@@ -36,26 +37,6 @@ body {
 	text-align: center;
 	padding-top: 30px;
 }
-
-#navigation {
-	display: flex;
-	justify-content: center;
-	gap: 30px;
-	margin-top: 20px;
-}
-
-#navigation li {
-	display: inline-block;
-	margin-right: 30px;
-}
-
-#navigation a {
-	color: #EEBA30;
-	text-decoration: none;
-	font-size: 24px;
-}
-
-
 
 h1{
     text-align: center;
@@ -114,7 +95,7 @@ h1{
 	text-align: left;
 }
 
-.autorin-abbildung figcaption{
+/*.autorin-abbildung figcaption{
 	max-width: 240px;
 	margin-top: 6px;
 
@@ -122,7 +103,7 @@ h1{
 	font-size: 0,8rem;
 	line-height: 1.4;
 	text-align: left;
-}
+}*/
 
 .autorin-text p{
 	color: #d3a625;
@@ -135,6 +116,92 @@ h1{
 	color: #d3a625;
 	padding-bottom: 10px;
 	margin-top: 5px;
+}
+
+.hogwarts-bereich{
+	width: 90%;
+	max-width: 1000px;
+	margin: 80px auto;
+	color: #d3d3d3;
+}
+
+.hogwarts-bereich h2{
+	margin-bottom: 25px;
+	text-align: left;
+	font-size: 2rem;
+	color: #d3a625;
+}
+
+.hogwarts-box{
+	display: flex;
+	align-items: flex-start;
+	gap: 30px;
+
+	padding: 30px;
+	background-color: rgba(20, 20, 20, 0.94);
+	border: 2px solid #d3a625;
+	border-left: 8px solid #d3a625;
+	border-radius: 12px;
+
+	box-shadow: 
+		0 0 25px rgba(211, 166, 37, 0.45),
+		0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+.hogwarts-bild-box{
+	flex: 0 0 380px;
+}
+
+.hogwarts-bild{
+	display: block;
+	width: 100%;
+	height: 320px;
+	object-fit: cover;
+
+	border: 2px solid #d3a625;
+	border-radius: 10px;
+}
+
+.hogwarts-text{
+	flex: 1;
+	text-align: left;
+}
+
+.hogwarts-text h3{
+	margin: 0 0 16px;
+	font-size: 1.8rem;
+	color: #d3a625;
+}
+
+.hogwarts-text p{
+	margin: 0 0 18px;
+	line-height: 1.9;
+	color: #d3a625;
+	font-size: large;
+}
+
+.video-bereich{
+	margin-top: 60px;
+	padding: 30px;
+
+	background-color: rgba(20, 20, 20, 0.94);
+	border: 2px solid #d3a625;
+	border-left: 8px solid #d3a625;
+	border-radius: 12px;
+	box-shadow: 0 0 25px rgba(211, 166, 37, 0.35), 
+				0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+.video-bereich h3{
+	font-size: 1.8rem;
+	color: #d3a625;
+	margin: 0 0 20px;
+}
+
+.hogwarts-video{
+	display: block;
+	width: 100%;
+	max-width: 1000px;
 }
 
 .haeuser-bereich{
@@ -193,6 +260,7 @@ h1{
 	max-width: 100%;
 	height: 200px;
 	filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.8));
+	z-index: +1;
 }
 
 .haus-text{
