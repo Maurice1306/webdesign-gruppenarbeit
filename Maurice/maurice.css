@@ -77,7 +77,7 @@ h1{
 }
 
 .autorin-artikel{
-	flex: 1;
+	/*flex: 1;*/
 	display: flex;
 	align-items: flex-start;
 	gap: 30px;
@@ -96,16 +96,6 @@ h1{
 	text-align: left;
 }
 
-/*.autorin-abbildung figcaption{
-	max-width: 240px;
-	margin-top: 6px;
-
-	color: #dddddd;
-	font-size: 0,8rem;
-	line-height: 1.4;
-	text-align: left;
-}*/
-
 .autorin-text p{
 	color: #d3a625;
 	line-height: 1.9;
@@ -122,18 +112,7 @@ h1{
 .autorin-canvas-layout{
 	display: flex;
 	align-items: flex-start;
-	gap: 40px;
-}
-
-.canvas-bereich{
-	width: 90%;
-	max-width: 900px;
-	margin: 80px auto;
-}
-
-.canvas-box p{
-	line-height: 1.9;
-	color: #d3a625;
+	gap: 60px;
 }
 
 .hogwarts-bereich{
