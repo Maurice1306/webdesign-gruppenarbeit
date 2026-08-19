@@ -11,6 +11,7 @@
     <meta name="keywords" content="Harry Potter, Hogwarts, Zauberei, HTML5, CSS3">
 
     <link href="maurice.css" rel="stylesheet">
+    <script src="maurice.js" defer></script>
 </head>
 
 <!-- Visible Content -->
@@ -31,26 +32,41 @@
             <section id="autorin" class="autorin-bereich">
                 <h2>Die Autorin</h2>
 
-                <article class="autorin-artikel">
-                    <figure class="autorin-abbildung">
-                        <img src="assets/J.K.-Rowling.jpg.jpg" alt="J.K. Rowling" title="J.K. Rowling">
-                    </figure>
+                <div class="autorin-canvas-layout">
+                    <article class="autorin-artikel">
+                        <figure class="autorin-abbildung">
+                            <img src="assets/J.K.-Rowling.jpg.jpg" alt="J.K. Rowling" title="J.K. Rowling">
+                        </figure>
 
-                    <div class="autorin-text">
-                        <h3>J. K. Rowling</h3>
+                        <div class="autorin-text">
+                            <h3>J. K. Rowling</h3>
 
-                        <p>Joanne. K. Rowling ist eine britische Schriftstellerin. Sie wurde 1965 in der Nähe Bristols geboren.
-                            Sie wurde vor allem als Autorin der Harry-Potter-Reihe bekannt.
-                            Die erste Geschichte über den jungen Zauberer Harry Potter erschien 1997 und entwickelte 
-                            sich zu einem weltweiten Erfolg. Insgesamt veröffentlichte Rowling sieben Harry-Potter-Romane, die in 
-                            viele Sprachen übersetzt und später auch erfolgreich verfilmt wurden.
-                            Mit ihrer fantasievollen Zauberwelt begeisterte J. K. Rowling Millionen von Leserinnen und Lesern und 
-                            prägte die moderne Fantasy-Literatur nachhaltig. Neben Harry Potter schrieb sie unter anderem weitere 
-                            Bücher, darunter die Reihe „Phantastische Tierwesen“.</p>
-                    </div>
-                </article>
+                            <p>
+                                Joanne. K. Rowling ist eine britische Schriftstellerin. Sie wurde 1965 in der Nähe Bristols geboren.
+                                Sie wurde vor allem als Autorin der Harry-Potter-Reihe bekannt.
+                                Die erste Geschichte über den jungen Zauberer Harry Potter erschien 1997 und entwickelte 
+                                sich zu einem weltweiten Erfolg. Insgesamt veröffentlichte Rowling sieben Harry-Potter-Romane, die in 
+                                viele Sprachen übersetzt und später auch erfolgreich verfilmt wurden.
+                                Mit ihrer fantasievollen Zauberwelt begeisterte J. K. Rowling Millionen von Leserinnen und Lesern und 
+                                prägte die moderne Fantasy-Literatur nachhaltig. Neben Harry Potter schrieb sie unter anderem weitere 
+                                Bücher, darunter die Reihe „Phantastische Tierwesen“.
+                            </p>
+                        </div>
+                    </article>
+
+                    <aside class="canvas-nebenbox">
+                        <canvas
+                            id="heiligtuemerCanvas"
+                            width="320"
+                            height="320"
+                            aria-label="Gezeichnetes Symbol mit Dreieck, Kreis und Linie">
+                            Dein Browser unterstützt Canvas nicht...
+                        </canvas>
+                    </aside> 
+                </div>           
             </section>
-            
+
+
             <section id="hogwarts" class="hogwarts-bereich">
                 <h2>Hogwarts: Die Schule der Hexerei und Zauberei</h2>
 
@@ -379,6 +395,5 @@
             </section>
         </main>
     </div>
-    <script src=maurice.js></script>
 </body>
 </html>
