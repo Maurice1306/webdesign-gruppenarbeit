@@ -80,14 +80,15 @@ h3 {
     text-shadow: #aaa 2px 2px 4px;
 }
 .bild-container{
-    display: flex;
+    display: block;
     gap: 15px;
     justify-content: center;
 }
 .bild-container img{
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     flex: 1;
+    height: 300px;
 }
 address{/* adress wird, benötig, um den text mittig zu haben und die linie auch mittig und im kompletten Rahmen des wrappers zu haben*/
     text-align: center;
