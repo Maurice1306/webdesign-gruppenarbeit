@@ -87,6 +87,43 @@ nav li{
     box-shadow: #aaa 3px 3px 4px;
     box-sizing: content-box;
 }
+.marijaia-box{
+    position: relative;
+    margin-left: -20px;
+    margin-top: -10px;
+    width: calc(100% + 40px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 15);
+    z-index: 2;
+}
+.bilbao-header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.spanien-karte{
+    width: 180px;
+    height: auto;
+}
+.bilbao-inhalt{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.bilbao-steckbrief{
+    flex: 1;
+    min-width: 250px;
+}
+.fakten{
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+.fakten li{
+    margin-bottom: 8px;
+    font-family: 'Roboto condenses' sans-serif;
+}
 /*h4 {
     background-color: azure;
 }*/
@@ -128,8 +165,9 @@ address{/* adress wird, benötig, um den text mittig zu haben und die linie auch
 .konfetti {
     position: fixed;
     top: -20px;
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 40%;
     animation-name: fallen;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
