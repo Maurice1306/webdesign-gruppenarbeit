@@ -2,16 +2,46 @@
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aste Nagusia</title>
-    <link rel="stylesheet" href="Lisa.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> //Die Angabe sorgt dafür, dass die Darstellung der Webseite  sich automatisch an das mobile Gerät anpasst Dazu gehören Handys und Tablets*/ 
+    <meta name="description" content="Webseite über Aste Nagusia">
+    <meta name="author" content="Lisa.Benali">
+    <meta name="robots" content="noindex" > /*Die Seite ist von Google nicht auffindbar, denn. sie ist nicht öffentlich*/
+
+    <link rel="stylesheet" href="Lisa.css" />
+    <script src="lisa.js" defer></script>
+
 
 </head>
 
 <body>
+    <nav aria-label="hauptnavigation">
+        <ul>
+            <li>
+                <a href="#Programm" >Programm</a>
+            </li>
+            <li>
+                <a href="#Marijaia" >Marijaia</a>
+            </li>
+            <li>
+                <a href="#Musik und Konzerte" >Musik und Konzerte</a>
+            </li>
+            <li>
+                <a href="#Feuerwerk" >Feuerwerk</a>
+            </li>
+            <li>
+                <a href="#Bilbao" >Bilbao</a>
+            </li>
+            <li>
+                <a href="#Galerie" >Galerie</a>
+            </li>
+        </ul>
+    </nav>
     <div class="header-container">
-        <img class="Header-svg" src="Header.svg" alt="Header Graphic">
+        <object>
+        <img class="Header-svg" src="assets/Header.svg" alt="Header Graphic">
+        </object>
         <div class="Header-text"> ASTE NAGUSIA </div>
         <div class="Header-text1">
             - Bilbao -
@@ -29,11 +59,11 @@
         <p>
         <section class="article_section">
             <h3 class="Einleitung">
-                Was ist Aste Nagusia? Ein kurzer Überblick:
+                Was ist Aste Nagusia?
+                Ein kurzer Überblick:
+ 
             </h3>
-            <p class="">
-
-            </p>
+            <p class="designfont sect_3sp">
             Neun Tage voller Genuss und Freude. In der Hauptstadt des Baskenlandes sind ab Mitte August nicht nur viele
             Touristen
             in der Stadt zu finden, sondern viele Basken und Spanier sind in der letzen Auguswoche in Bilbao
@@ -43,25 +73,26 @@
             kostenfrei. Es gibt Konzerte, Tänze, Kochwettbewerbe, Vergügungsparks für Kinder und vieles mehr. Das Neun
             tägige Fest ist etwas für alle, egal ob klein oder groß. Man trifft auf dem Fest von kleinen Kindern bis
             älteren Senioren alle an.
+            </p>
         </section>
 
         </p>
-        <section class="article_section1">
+        <section class="article_section1" id="Programm">
             <h3 class="Einleitung">
                 Programm:
             </h3>
             <img class="header-image" src="IMG_7687.HEIC" alt="Foto im Park">
 
             <div>
-    <section class="article_section">
+    <section class="article_section" id="Marijaia">
                 <h4>
                     Marijaia
                 </h4>
-                <p>
+                <p class="designfont sect_3sp">
                     Marijaia ist eine Puppe mit der das Fest eingeletet ist. Sie wird wird gezeigt und mit dem Zeigen der Puppe  beginnt das Fest und alle Aktivitäten die damit einhergehen.
                 </p>
     </section>
-                <section class="article_section">
+                <section class="article_section" id="Musik und Konzerte">
                 <h4>
                     Musik und Konzerte
                 </h4>
@@ -69,39 +100,47 @@
                     
                 </p>
     </section>
-              <section class="article_section">
+              <section class="article_section" id="Feuerwerk">
                 <h4>
                     Feuerwerk
                 </h4>
                 <p>
+                    <video controls
+                    preload="auto"
+                    width="800"
+                    height="450">
+                     <source src="assets/IMG_8124.MOV">
+                     </video>
+                    
                     
                 </p>
     </section>
-    <section class="article_section">
+    <section class="article_section" id="Bilbao">
                 <h4>
                     Bilbao
                 </h4>
                 <p>
-                    
+                    <canvas id="wappen" width="320" height="420"></canvas>
+                   
                 </p>
 </section>
-              <section class="article_section">
+              <section class="article_section" id="Galerie">
                 <h4>
                     Galerie
                 </h4>
                 <p>
 
 <div class="bild-container">
-                    <img class="header-image" src="IMG_7687.HEIC" alt="Foto im Park">
-                    <img class="header-image" src="IMG_7938.HEIC" alt="test">
-                    <img class="header-image" src="IMG_7942.HEIC" alt="test">
-                    <img class="header-image" src="IMG_7799.HEIC" alt="test">
+                    <img class="header-image" src="assets/IMG_7687.HEIC" alt="Foto im Park">
+                    <img class="header-image" src="assets/IMG_7938.HEIC" alt="test">
+                    <img class="header-image" src="assets/IMG_7942.HEIC" alt="test">
+                    <img class="header-image" src="assets/IMG_7799.HEIC" alt="test">
                 </p>
                 </div> 
 </section>
         </section>
 
-        <a href="Ongi etorri Bilbao .pdf" target="_blank">PDF herunterladen</a>
+        <a href= "assets/Ongi etorri Bilbao .pdf" target="_blank">PDF herunterladen</a>
 
         <p>
 
