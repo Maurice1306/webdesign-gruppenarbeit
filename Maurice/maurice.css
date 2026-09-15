@@ -1,48 +1,49 @@
 * {
 padding: 0;
 margin: 0;
-
+box-sizing: border-box;
 }
 
 body {
-	font-family: 'Times New Roman', Times, serif;
-	font-size: 1.9rem;
-}
-
-.background {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	
-	background-image: url("assets/SternenhimmelV2.png");	
+	background-image: url("assets/SternenhimmelV2.png");
 	background-size: cover;
 	background-position: center;
+	background-attachment: fixed;
 
-	z-index: -1;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 1.9rem;
 
 	animation: zoom 5s infinite alternate ease-in-out;
 }
 
 @keyframes zoom {
 	from {
-		transform: scale(1);
+		background-size: 100%;
 	}
 	to {
-		transform: scale(1.1);
+		background-size: 110%;
 	}
 }
 
 .header {
+	position: relative;
 	width: auto;
 	text-align: center;
 	padding-top: 30px;
+}
+
+.schnatz-header{
+	width: 150px;
+	height: auto;
+	padding-left: 50px;
+	position: absolute;
 }
 
 h1{
     text-align: center;
 	margin-top: 15px;
 	margin-bottom: 10px;
-	font-size: 40px;
+	font-size: 2.5rem;
 	color: #d3a625;
 
 	animation: float 4s ease-in-out infinite;
@@ -69,7 +70,7 @@ h1{
 }
 
 .autorin-bereich h2 {
-	margin-bottom: 0 0 20px;
+	margin-bottom: 20px;
 	color: #d3a625;
 	text-align: left;
 	font-size: 2rem;
@@ -96,6 +97,13 @@ h1{
 	padding: 6px;
 }
 
+/*.autorin-artikel figcaption{
+	color: #d3a625;
+	padding-top: 5px;
+	font-size: 1rem;
+
+}*/
+
 .autorin-abbildung img{
 	display: block;
 	
@@ -112,7 +120,7 @@ h1{
 	line-height: 1.9;
 	padding-right: 10px;
 	padding-bottom: 20px;
-	font-size: large;
+	font-size: 1.125rem;
 }
 
 .autorin-text h3{
@@ -173,7 +181,6 @@ h1{
 
 	border: 2px solid #d3a625;
 	border-radius: 10px;
-	box-sizing: border-box;
 }
 
 .hogwarts-text{
@@ -191,7 +198,7 @@ h1{
 	margin: 0 0 18px;
 	line-height: 1.9;
 	color: #ffffff;
-	font-size: large;
+	font-size: 1.125rem;
 }
 
 .video-bereich{
@@ -216,6 +223,23 @@ h1{
 	display: block;
 	width: 100%;
 	max-width: 1000px;
+}
+
+.audio-bereich{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 40px;
+}
+
+audio{
+	width: 100%;
+	max-width: 500px;
+	border-radius: 12px;
+	padding: 8px;
+	background: #1a1a1a;
+	outline: 2px solid #d3a625;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .haeuser-bereich{
@@ -269,14 +293,6 @@ h1{
 	height: auto;
 }
 
-.haus-wappen{
-	width: 160px;
-	max-width: 100%;
-	height: 200px;
-	filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.8));
-	z-index: +1;
-}
-
 .haus-text{
 	flex: 1;
 	text-align: left;
@@ -309,7 +325,7 @@ h1{
 	background-color: rgba(0, 0, 0, 0.75);
 	color: #d3a625;
 
-	font-size: 10px;
+	font-size: 0.625rem;
 	font-weight: bold;
 	cursor: pointer;
 
@@ -373,7 +389,6 @@ h1{
 	border: 2px solid #d3a625;
 	border-left-width: 8px;
 	border-radius: 12px;
-	box-shadow: 0 0 20px rgba(211, 166, 37, 0.55), 0 12px 30px;
 
 	background-color: rgba(20, 20, 20, 0.94);
 	box-shadow: 
@@ -381,7 +396,6 @@ h1{
 		0 12px 30px rgba(0, 0, 0, 0.8);
 	
 	text-align: left;
-	box-sizing: border-box;
 }
 
 .charakter-artikel.links{
@@ -432,6 +446,10 @@ h1{
 }
 
 .pdf-button{
+	display: inline-flex;      
+	align-items: center;       
+	justify-content: center;   
+
 	font-size: 1rem;
 	font-weight: bold;
 	width: 140px;
@@ -443,9 +461,9 @@ h1{
 	color: #d3a625;
 	border: 2px solid #d3a625;
 	border-radius: 10px;
+	text-decoration: none;
 
 	transition: all 0.25s ease;
-
 }
 
 .pdf-button:hover{
@@ -456,276 +474,29 @@ h1{
 	box-shadow: 0 0 18px rgba(211, 166, 37, 0.65);
 }
 
-@media print{
-	@page{
-		size: A4;
-		margin: 0;
-	}
-
-	*{
-		box-sizing: border-box;
-		box-shadow: none;
-		animation: none;
-		transition: none;
-	}
-
-	body {
-		margin: 0;
-		padding: 15mm;
-
-		background: white;
-		color: black;
-
-		font-size: 10.5pt;
-		line-height: 1.45;
-	}
-
-	.button-box,
-	.slider-button,
-	.slider-punkte,
-	.video-bereich,
-	.canvas-nebenbox {
-		display: none;
-	}
-
-	/*Hauptbereiche an Papierbreite anpassen*/
-	.autorin-bereich,
-	.hogwarts-bereich,
-	.haeuser-bereich,
-	.charaktere-bereich{
-		width: 100%;
-		max-width: none;
-
-		margin: 0 0 12mm;
-		padding: 0;
-	}
-
-	/*Überschriften formatieren*/
-	h1,
-	h2,
-	h3 {
-		color: #7a5900;
-		text-shadow: none;
-		break-after: avoid-page;
-	}
-
-	h1 {
-		font-size: 22pt;
-	}
-
-	h2 {
-		margin: 0 0 6mm;
-		font-size: 18pt;
-	}
-
-	h3 {
-		margin: 0 0 4mm;
-		font-size: 14pt;
-	}
-
-	/*Fließtexte formatieren*/
-	p {
-		margin: 0 0 4mm;
-
-		color: black;
-		font-size: 10.5pt;
-		line-height: 1.45;
-		text-align: left;
-
-		orphans: 3;
-		widows: 3;
-	}
-
-	.autorin-canvas-layout {
-		display: block;
-		width: 100%;
-	}
-
-	.autorin-artikel {
-		display: grid;
-		grid-template-columns: 42mm 1fr;
-		gap: 7mm;
-		align-items: start;
-
-		width: 100%;
-		margin: 0 0 10mm;
-		padding: 6mm;
-
-		background: white;
-		border: 1px solid #9a7100;
-		border-left: 4px solid #9a7100;
-		border-radius: 4px;
-
-		break-inside: avoid;
-	}
-
+@media (max-width: 1150px) {
 	.autorin-abbildung {
-		width: 42mm;
-		margin: 0;
-		padding: 0;
-	}
-
-	.autorin-abbildung img {
-		display: block;
-		width: 42mm;
-		height: 55mm;
-		margin: 0;
-		object-fit: cover;
-	}
-
-	.autorin-text {
-		width: 100%;
-		min-width: 0;
-	}
-
-	.hogwarts-box {
-		display: block;
-		width: 100%;
-
-		margin: 0 0 10mm;
-		padding: 6mm;
-
-		background: white;
-		border: 1px solid #9a7100;
-		border-left: 4px solid #9a7100;
-		border-radius: 4px;
-		break-inside: auto;
+		flex-basis: 180px;
 	}
 
 	.hogwarts-bild-box {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		gap: 8mm;
-
-		width: 100%;
-		margin: 0 0 7mm;
-
-		break-inside: avoid;
+		flex-basis: 300px;
 	}
 
-	.hogwarts-bild-box .hogwarts-bild {
-		display: block;
-
-		width: 70mm;
-		height: 48mm;
-		max-width: none;
-
-		margin: 0;
-		object-fit: contain;
-	}
-
-	.hogwarts-text {
-		display: block;
-		width: 100%;
-		min-width: 0;
-		break-inside: auto;
-	}
-
-	.slider-box {
-		display: block;
-
-		width: 100%;
-		height: auto;
-		min-height: 0;
-
-		margin: 0;
-		padding: 0;
-
-		background: transparent;
-		border: none;
-		box-shadow: none;
-	}
-
-	.haus-slide,
-	.haus-slide.active {
-		display: grid;
-		grid-template-columns: 42mm 1fr;
-		gap: 7mm;
-		align-items: start;
-
-		width: 100%;
-		margin: 0;
-		padding: 6mm;
-
-		background: white;
-		border: 1px solid #9a7100;
-		border-left: 4px solid #9a7100;
-		border-radius: 4px;
-
-		break-inside: avoid;
+	.hogwarts-bild {
+		height: 300px;
 	}
 
 	.haus-bild-box {
-		display: block;
-		width: 42mm;
-		margin: 0;
+		flex-basis: 200px;
 	}
 
-	.haus-bild-box img {
-		display: block;
-
-		width: 42mm;
-		height: 48mm;
-
-		margin: 0;
-		object-fit: contain;
+	.autorin-canvas-layout {
+		gap: 30px;
 	}
 
-	.haus-text {
-		display: block;
-		width: 100%;
-		min-width: 0;
-		text-align: left;
+	#heiligtuemerCanvas {
+		width: 260px;
+		height: 260px;
 	}
-
-	.haus-text h3 {
-		text-align: left;
-	}
-
-	.charakter-artikel,
-	.charakter-artikel.links,
-	.charakter-artikel.rechts {
-		display: grid;
-		grid-template-columns: 38mm 1fr;
-		gap: 7mm;
-		align-items: start;
-
-		width: 100%;
-		max-width: none;
-
-		margin: 0 0 8mm;
-		padding: 6mm;
-
-		background: white;
-		border: 1px solid #9a7100;
-		border-left: 4px solid #9a7100;
-		border-radius: 4px;
-
-		break-inside: avoid;
-	}
-
-	.charakter-abbildung {
-		display: block;
-		width: 38mm;
-		height: 48mm;
-	}
-
-	.charakter-abbildung img {
-		display: block;
-
-		width: 38mm;
-		height: 48mm;
-
-		margin: 0;
-		object-fit: cover;
-	}
-
-	.charakter-text {
-		display: block;
-		width: 100%;
-		min-width: 0;
-	}
-
 }

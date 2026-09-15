@@ -87,12 +87,3 @@ function zeichneHeiligtuemerSymbol(){
 }
 
 zeichneHeiligtuemerSymbol();
-
-
-const pdfButton = document.getElementById("pdfbtn");
-
-if(pdfbtn) {
-    pdfButton.addEventListener("click", function(){
-        window.print
-    });
-}
