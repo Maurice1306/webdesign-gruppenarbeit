@@ -1,0 +1,184 @@
+body {
+    margin: 0 auto;
+    background-color: rgb(253, 248, 210);
+    padding: 0;
+}
+#wrapper{
+    /* Sind das sie Werte die wir brauchen oder können wir auch andere nehmen?????*/ 
+    /* Die hier angegeben werte wurden aus dem CSS von Herr Kress kopiert*/
+
+	width: 1000px;
+	min-height:400px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+	background-color:rgb(253, 248, 210);	
+}
+nav ul{
+    list-style-type: .none;
+    margin: 0; 
+    padding: 0;
+}
+nav li{
+    display: inline-block;
+    margin: 5px 20px 5px 0;
+}
+.header-container{
+    position: relative; /* Wenn es absolute wäre, würde man den immer sehen*/ 
+    width: 100%;
+}
+.Header-svg{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.Header-text{
+    position: absolute;
+    top: 20%;
+    left: 38%;
+    color: #daa520;
+    font-family: cursive;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    white-space: nowrap;   
+}
+.Header-text1{
+    position: absolute;
+    top: 42%;
+    left: 46%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: rgb(173, 216, 230);
+    text-shadow: 1px 1px 2px black;
+
+}
+.Header-text2{
+    position: absolute;
+    top: 53%;
+    left: 47%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    color: rgb(173, 216, 230);
+    text-shadow: 1px 1px 2px black;
+
+}
+.sect_3sp{
+    column-count: 3;
+    column-gap: 25px;
+    line-height: 1.5;
+}
+.designfont{
+    text-align: justify;
+    padding-right: 0,5em;
+    hyphens: auto;
+
+}
+.article_section{
+    background-color: rgba(227, 246, 246, 0.833);
+    border-radius: 4px;
+    box-shadow: #aaa 3px 3px 4px;
+    box-sizing: content-box;
+    padding: 20px;
+}
+.article_section1{
+    background-color: rgb(227, 245, 245);
+    border-radius: 4px;
+    box-shadow: #aaa 3px 3px 4px;
+    box-sizing: content-box;
+}
+.marijaia-box{
+    position: relative;
+    margin-left: -20px;
+    margin-top: -10px;
+    width: calc(100% + 40px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 15);
+    z-index: 2;
+}
+.bilbao-header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.spanien-karte{
+    width: 180px;
+    height: auto;
+}
+.bilbao-inhalt{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.bilbao-steckbrief{
+    flex: 1;
+    min-width: 250px;
+}
+.fakten{
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+.fakten li{
+    margin-bottom: 8px;
+    font-family: 'Roboto condenses' sans-serif;
+}
+/*h4 {
+    background-color: azure;
+}*/
+/* Zweites Bild*/
+.header-image {
+    width: 55%;
+}
+h3 {
+    font-family: 'Roboto condensed', sans-serif;
+    color: #093a80;
+    text-shadow: #aaa 2px 2px 4px;
+}
+.bild-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    justify-content: center;
+    padding: 20px;
+}
+.bild-container img{
+    width: 100%;
+    height: auto;
+    flex: 1;
+    height: 300px;
+}
+.video{
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-top: 10px;
+    background-color: #093a80;
+}
+address{/* adress wird, benötig, um den text mittig zu haben und die linie auch mittig und im kompletten Rahmen des wrappers zu haben*/
+    text-align: center;
+    border-top: solid 1px rgba(0, 0, 0, 0.371);
+}
+
+.konfetti {
+    position: fixed;
+    top: -20px;
+    width: 16px;
+    height: 16px;
+    border-radius: 40%;
+    animation-name: fallen;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+    z-index: 9999;
+}
+@keyframes fallen {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+    }
+}
