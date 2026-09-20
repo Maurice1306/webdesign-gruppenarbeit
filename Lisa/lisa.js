@@ -53,26 +53,10 @@ ctx.textAlign = 'center';
 ctx.fillText('ATLETICO', 160, 45); 
 ctx.fillText('BILBAO', 160, 385);
 
+function weiter(){
+    document.getElementById('fenster').scrollLeft += 320;
+}
 
-
-
-window.addEventListener('load', () => {
-    const farben = ["#7EC0EE", "#F4A7B9", "#B57EDC", "#ffff", "#A0E6E0", "#FFE5B4", "#FDF6B2"]; 
-    for (let i= 0; i < 150; i++){
-        const konfetti = document.createElement("div"); 
-        konfetti.className = "konfetti";
-
-        konfetti.style.left = Math.random() * 100 + "vw"; 
-        const groesse = Math.random()* 10 + 12;
-        konfetti.style.width = groesse + "px";
-        konfetti.style.height = groesse + "px";
-        konfetti.style.borderRadius = "50%";
-
-
-        konfetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
-        konfetti.style.animationDelay = Math.random() * 2 + "s"; 
-        konfetti.style.backgroundColor = 
-        farben[Math.floor(Math.random() * farben.length)];
-        document.body.appendChild(konfetti);
-    }
-});
+function zurueck(){
+    document.getElementById('fenster').scrollLeft -= 320;
+}
