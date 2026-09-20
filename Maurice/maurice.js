@@ -18,21 +18,13 @@ function zeigeSlide(index) {
     punkte[index].classList.add("active-punkt");
 }
 
-nextButton.addEventListener("click", function(){
-    aktuellerIndex++;
-
-    if (aktuellerIndex >= slides.length) {
-        aktuellerIndex = 0;
-    }
-    zeigeSlide (aktuellerIndex);
+nextButton.addEventListener("click", function () {
+    aktuellerIndex = (aktuellerIndex + 1) % slides.length;
+    zeigeSlide(aktuellerIndex);
 });
 
-prevButton.addEventListener("click", function() {
-    aktuellerIndex--;
-
-    if (aktuellerIndex < 0) {
-        aktuellerIndex = slides.length - 1;
-    }
+prevButton.addEventListener("click", function () {
+    aktuellerIndex = (aktuellerIndex - 1 + slides.length) % slides.length;
     zeigeSlide(aktuellerIndex);
 });
 
