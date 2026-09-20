@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+<!--metadata-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Eine einfache Informationswebsite über das Kartenspiel Doppelkopf">
+    <meta name="author" content="Karsten">
+    
+    <title>Doppelkopf - Das Kartenspiel</title>
+
+    <link href="Karsten.css" rel="stylesheet">
+    <script src="Karsten.js" defer></script>
+</head>
+
+<!-- Visible Content -->
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1>Doppelkopf</h1>
+            <p class="subtitle">Das klassische Kartenspiel einfach erklärt</p>
+            <nav aria-label="Hauptnavigation">
+                <ul>
+                    <li><a href="#start">Start</a></li>
+                    <li><a href="#geschichte">Geschichte</a></li>
+                    <li><a href="#regeln">Regeln</a></li>
+                    <li><a href="#karten">Karten &amp; Punkte</a></li>
+                    <li><a href="#medien">Medien</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="start">
+        <section class="hero">
+            <div class="container">
+                <h2>Willkommen bei Doppelkopf</h2>
+                <p>Doppelkopf ist ein Kartenspiel für vier Personen. Auf dieser Website werden Geschichte, Karten, grundlegende Regeln und typische Ansagen vorgestellt.</p>
+                <a class="button" href="downloads/doppelkopf-regeln.pdf" download>Regelwerk als PDF herunterladen</a>
+            </div>
+        </section>
+
+        <div class="container content">
+        <article id="geschichte">
+            <h2>Geschichte</h2>
+            <p>Doppelkopf gehört zu den traditionellen deutschen Kartenspielen. Das Spiel wird mit einem Doppelblatt gespielt. Viele Regeln und Sonderregeln können regional unterschiedlich sein.</p>
+            <p><strong>Hinweis:</strong> Die folgenden Informationen sind bewusst als leicht verständliche Einführung gedacht. Für eine vollständige Übersicht steht das PDF-Regelwerk zur Verfügung.</p>
+        </article>
+
+        <section id="regeln">
+            <h2>Grundregeln</h2>
+            <ol>
+                <li>Vier Personen spielen gemeinsam</li>
+                <li>Das verwendete Kartenblatt besteht aus 48 Karten (24 Karten a 2 Decks aus jeweils: Ass, König, Dame, Bube, Neun)</li>
+                <li>Die Karten werden gleichmäßig verteilt</li>
+                <li>Durch das Ausspielen von Karten entstehen Stiche</li>
+                <li>Je nach Spielart gehören die Spieler unterschiedlichen Parteien an (die Kreuz-Damen auch Reh-dame genannt spielen zusammen)</li>
+                <li>Am Ende werden die gewonnenen Augen gezählt</li>
+            </ol>
+            <p>Da es unterschiedliche Regelvarianten gibt, enthält das <a href="downloads/doppelkopf-regeln.pdf">PDF-Regelwerk</a> die für dieses Uniprojekt verwendete vereinfachte Variante.</p>
+        </section>
+
+        <section id="karten">
+            <h2>Karten &amp; Punkte</h2>
+            <figure>
+                <object data="assets/images/kartenfarben.svg" type="image/svg+xml" aria-label="Vier Kartenfarben: Kreuz, Pik, Herz und Karo">
+                    Die SVG-Grafik mit den vier Kartenfarben konnte nicht geladen werden.
+                </object>
+                <figcaption>Die vier Kartenfarben des Doppelkopf-Kartenblatts</figcaption>
+            </figure>
+
+            <div class="table-wrapper">
+                <table>
+                    <caption>Kartenwerte in Augen</caption>
+                    <thead>
+                        <tr><th scope="col">Karte</th><th scope="col">Augen</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Ass</td><td>11</td></tr>
+                        <tr><td>Zehn</td><td>10</td></tr>
+                        <tr><td>König</td><td>4</td></tr>
+                        <tr><td>Dame</td><td>3</td></tr>
+                        <tr><td>Bube</td><td>2</td></tr>
+                        <tr><td>Neun</td><td>0</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="canvas-section">
+            <h2>Der virtuelle Spieltisch</h2>
+            <p>Das folgende Bild wird mit dem HTML5-Element <code>canvas</code> und JavaScript gezeichnet.</p>
+            <div class="canvas-frame">
+                <canvas id="gameCanvas" width="800" height="420">
+                    Ihr Browser unterstützt Canvas nicht.
+                </canvas>
+            </div>
+            <p class="small">Canvas 2D wird hier für eine einfache schematische Darstellung des Spieltisches verwendet.</p>
+        </section>
+
+        <section id="medien">
+            <h2>Audio</h2>
+            <p>Typische Ansagen vor dem Legen der ersten Karte</p>
+
+            <div class="media">
+                <h3>„Gesund“</h3>
+                <audio controls>
+                    <source src="assets/audio/gesund.mp3" type="audio/mpeg">
+                    <source src="assets/audio/gesund.ogg" type="audio/ogg">
+                    <source src="assets/audio/gesund.wav" type="audio/wav">
+                    Ihr Browser unterstützt das Audioelement nicht.
+                </audio>
+                <p class="small">wird gesagt, wenn man das Spiel normal spielen kann</p>
+            </div>
+
+            <div class="media">
+                <h3>„Vorbehalt“</h3>
+                <audio controls>
+                    <source src="assets/audio/vorbehalt.mp3" type="audio/mpeg">
+                    <source src="assets/audio/vorbehalt.ogg" type="audio/ogg">
+                    <source src="assets/audio/vorbehalt.wav" type="audio/wav">
+                    Ihr Browser unterstützt das Audioelement nicht.
+                </audio>
+                <p class="small">wird gesagt, wenn man Solo, Armut oder Hochzeit spielen möchte</p>
+            </div>
+
+            <h2>Video</h2>
+            <p>Ein kurzes Video zeigt den Ablauf einer Spielrunde</p>
+            <div class="video">
+                <video controls preload="metadata" poster="images/video-poster.svg">
+                    <source src="video/doppelkopf-erklaerung.mp4" type="video/mp4">
+                    <source src="video/doppelkopf-erklaerung.webm" type="video/webm">
+                    <source src="video/doppelkopf-erklaerung.ogv" type="video/ogg">
+                    Ihr Browser unterstützt das Videoelement nicht.
+                </video>
+            </div>
+            <p class="small">Ablauf einer Runde: ein Stich wird gespielt</p>
+        </section>
+
+        <section id="download">
+            <h2>Download</h2>
+            <p><a class="button" href="downloads/doppelkopf-regeln.pdf" download>Doppelkopf-Regeln als PDF</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Karsten Modrack - Doppelkopf</p>
+        </div>
+    </footer>
+</body>
+</html>
