@@ -99,12 +99,6 @@ nav li{
     box-shadow: 0 4px 12px rgba(0, 0, 0, 15);
     z-index: 2;
 }
-.bilbao-header{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
 .spanien-karte{
     width: 180px;
     height: auto;
