@@ -91,13 +91,34 @@ nav li{
     color: white;
     margin-bottom: 25px;
 }
-.marijaia-box{
-    position: relative;
-    margin-left: -20px;
-    margin-top: -10px;
-    width: calc(100% + 40px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 15);
-    z-index: 2;
+.programm-text{
+    flex: 1;
+    min-width: 0;
+}
+#Programm .text-mit-bild img{
+    width: 400px;
+    height: 250px;
+}
+.programm-liste{
+    line-height: 1.5;
+    margin: 0;
+    padding-left: 1.2em;
+}
+.text-mit-bild{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+.text-mit-bild img{
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 6px;
+}
+.text-mit-bild .sect_2sp{
+    flex: 1;
+    min-width: 0;
 }
 .spanien-karte{
     width: 200px;
