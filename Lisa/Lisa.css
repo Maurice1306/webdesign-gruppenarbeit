@@ -162,7 +162,7 @@ nav a:hover {
 }
 .fakten li{
     margin-bottom: 8px;
-    font-family: 'Roboto Condensed' sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 /* Zweites Bild*/
 .header-image {
