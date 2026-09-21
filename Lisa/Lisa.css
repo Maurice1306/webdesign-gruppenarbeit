@@ -4,9 +4,6 @@ body {
     padding: 0;
 }
 #wrapper{
-    /* Sind das sie Werte die wir brauchen oder können wir auch andere nehmen?????*/ 
-    /* Die hier angegeben werte wurden aus dem CSS von Herr Kress kopiert*/
-
 	width: 1200px;
 	min-height:400px;
 	margin-left:auto;
@@ -99,7 +96,6 @@ nav a:hover {
 
 }
 .article_section{
-   /* background-color: rgba(227, 246, 246, 0.833);*/
     background-color: #1e4a82;
     border-radius: 4px;
     box-shadow: #aaa 3px 3px 4px;
@@ -150,10 +146,6 @@ nav a:hover {
     line-height: 1.5;
     align-items: start;
 }
-/*.bilbao-steckbrief{
-    flex: 1;
-    min-width: 250px;
-}*/
 .bilbao-rechts{
     display: flex;
     flex-direction: column;
@@ -178,9 +170,7 @@ nav a:hover {
 }
 h3 {
     font-family: 'Roboto condensed', sans-serif;
-    /*color: #093a80;*/
     color: #fdf8d2;	
-    /*text-shadow: #aaa 2px 2px 4px;*/
 }
 .slideshow{
     display: flex;
@@ -223,6 +213,11 @@ h3 {
     border-radius: 6px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
     background: #000;
+}
+.feuerwerk-video audio{
+    display: block;
+    width: 100%;
+    margin-top: 15px;
 }
 .feuerwerk-video figcaption{
     margin-top: 10px;
