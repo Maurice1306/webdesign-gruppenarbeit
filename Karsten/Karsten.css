@@ -23,9 +23,12 @@ body {
 
 /* 3. Header */
 .site-header {
+    position: sticky;
+    top: 0;
     background: #174a3a;
     color: #ffffff;
-    padding: 28px 0 0;
+    padding: 18px 0 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .site-header h1 {
@@ -169,11 +172,15 @@ th {
 audio,
 video {
     width: 100%;
-    max-width: 800px;
+    max-width: 400px;
 }
 
 .canvas-frame {
-    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
 }
 
 canvas {
