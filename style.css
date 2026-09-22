@@ -1,60 +1,235 @@
-html{
-    height: 100%;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    min-height: 100%;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     margin: 0;
-    padding: 0;
-
-    background-image: url("assets/galaxy_background_blue.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-color: #f0f0f0;
+    background-color: #f4fbfc;
+    color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
 }
 
-#header{
+header {
+    padding: 60px 20px;
+    background: linear-gradient(#0096c7, #0077b6);
+    color: #ffffff;
     text-align: center;
-    color: white;
-    font-size: 25px;
 }
 
-#kreis-nav {
-    position: relative;
-    width: 600px;3
-    height: 600px;
-    margin: 40px auto;
+header h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.8rem;
 }
 
-#kreis-nav ul {
+header p {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+}
+
+nav {
+    background-color: #ffd166;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 15px;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
+}
+
+nav a {
+    display: block;
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: #222222;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+nav a:focus {
+    outline: 3px solid #005f73;
+    outline-offset: 3px;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+section h2 {
+    margin-top: 0;
+    color: #0077b6;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+}
+
+article {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #edf8fa;
+    border-left: 5px solid #ffd166;
+    border-radius: 8px;
+}
+
+article h3 {
+    margin-top: 0;
+    color: #005f73;
+}
+
+p {
+    font-size: 1rem;
+}
+
+main p {
+    line-height: 1.7;
+}
+
+section p {
+    margin-bottom: 18px;
+}
+
+audio {
     width: 100%;
-    height: 100%;
+    max-width: 500px;
 }
 
-.kachel {
-    position: absolute;
-    width: 100px;
-    height: 80px;
-    text-align: center;
-    background-color: #65bdd7;
-    border: 2px solid #333333;
-}
-
-.kachel a {
+video {
     display: block;
     width: 100%;
-    height: 100%;
-    line-height: 80px;
-    color: #000000;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
 }
 
-.k1 { top: 200px;  left: 260px; }
-.k2 { top: 350px;  left: 477px; }
-.k3 { top: 585px; left: 400px; }
-.k4 { top: 585px; left: 100px; }
-.k5 { top: 350px; left: 44px;  }
+canvas {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    background-color: #ffffff;
+    border: 3px solid #0077b6;
+    border-radius: 10px;
+}
+
+.zakynthos-grafik {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.himmel {
+    fill: #74c7e3;
+}
+
+.sonne {
+    fill: #ffd166;
+}
+
+.meer {
+    fill: #0096c7;
+}
+
+.svg-text {
+    fill: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#download a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #0077b6;
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#download a:hover {
+    background-color: #005f73;
+    transform: scale(1.03);
+}
+
+#download a:focus {
+    outline: 3px solid #ffd166;
+    outline-offset: 3px;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 30px 20px;
+    background-color: #005f73;
+    color: #ffffff;
+    text-align: center;
+}
+
+footer a {
+    color: #ffd166;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+footer a:focus {
+    outline: 3px solid #ffd166;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 40px 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    section {
+        margin: 25px 0;
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+}
