@@ -28,7 +28,6 @@ prevButton.addEventListener("click", function () {
     zeigeSlide(aktuellerIndex);
 });
 
-zeigeSlide(aktuellerIndex);
 
 /*Canvas Erstellung*/ 
 
