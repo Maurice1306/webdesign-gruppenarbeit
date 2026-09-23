@@ -1,12 +1,495 @@
-3body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: ;
-    color: #222;
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
 }
 
-header {
-    background-color: ;
-    color: white;
-    
+body {
+	background-image: url("assets/SternenhimmelV2.png");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 1.9rem;
+
+	animation: zoom 5s infinite alternate ease-in-out;
+}
+
+@keyframes zoom {
+	from {
+		background-size: 100%;
+	}
+	to {
+		background-size: 110%;
+	}
+}
+
+.header {
+	position: relative;
+	width: auto;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.schnatz-header{
+	width: 150px;
+	height: auto;
+	padding-left: 50px;
+	position: absolute;
+}
+
+h1{
+    text-align: center;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-size: 2.5rem;
+	color: #d3a625;
+
+	animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+	0%{
+		transform: translateY(0);
+	}
+
+	50%{
+		transform: translateY(-10px);
+	}
+
+	100%{
+		transform: translateY(0%);
+	}
+}
+
+.autorin-bereich{
+	width: 90%;
+	max-width: 1200px;
+	margin: 80px auto;
+}
+
+.autorin-bereich h2 {
+	margin-bottom: 20px;
+	color: #d3a625;
+	text-align: left;
+	font-size: 2rem;
+	padding-bottom: 5px;
+}
+
+.autorin-artikel{
+	flex: 1;
+	display: flex;
+	align-items: flex-start;
+	gap: 30px;
+
+	/*Box hebt sich vom Hintergrund ab*/
+	border: 2px solid #d3a625;
+	border-left-width: 8px;
+	border-radius: 12px;
+	box-shadow: 0 0 20px rgba(211, 166, 37, 0.55), 0 12px 30px;
+	text-align: left;
+}
+
+.autorin-abbildung{
+	flex: 0 0 220px;
+	margin: 25px;
+	padding: 6px;
+}
+
+.autorin-abbildung img{
+	display: block;
+	
+	width: 100%;
+	height: 240px;
+	object-fit: cover;
+
+	border: 2px solid #d3a625;
+	border-radius: 10px;
+}
+
+.autorin-text p{
+	color: #d3a625;
+	line-height: 1.9;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	font-size: 1.125rem;
+}
+
+.autorin-text h3{
+	color: #d3a625;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	margin-top: 5px;
+}
+
+.autorin-canvas-layout{
+	display: flex;
+	align-items: flex-start;
+	gap: 60px;
+}
+
+.hogwarts-bereich{
+	width: 90%;
+	max-width: 1000px;
+	margin: 80px auto;
+}
+
+.hogwarts-bereich h2{
+	margin-bottom: 25px;
+	text-align: left;
+	font-size: 2rem;
+	color: #d3a625;
+}
+
+.hogwarts-box{
+	display: flex;
+	align-items: flex-start;
+	gap: 30px;
+
+	padding: 30px;
+	background-color: rgba(20, 20, 20, 0.94);
+	border: 2px solid #d3a625;
+	border-left: 8px solid #d3a625;
+	border-radius: 12px;
+
+	box-shadow: 
+		0 0 25px rgba(211, 166, 37, 0.45),
+		0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+.hogwarts-bild-box{
+	flex: 0 0 380px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 55px;
+}
+
+.hogwarts-bild{
+	display: block;
+	width: 100%;
+	height: 380px;
+	object-fit: cover;
+
+	border: 2px solid #d3a625;
+	border-radius: 10px;
+}
+
+.hogwarts-text{
+	flex: 1;
+	text-align: left;
+}
+
+.hogwarts-text h3{
+	margin: 0 0 16px;
+	font-size: 1.8rem;
+	color: #d3a625;
+}
+
+.hogwarts-text p{
+	margin: 0 0 18px;
+	line-height: 1.9;
+	color: #ffffff;
+	font-size: 1.125rem;
+}
+
+.video-bereich{
+	margin-top: 60px;
+	padding: 30px;
+
+	background-color: rgba(20, 20, 20, 0.94);
+	border: 2px solid #d3a625;
+	border-left: 8px solid #d3a625;
+	border-radius: 12px;
+	box-shadow: 0 0 25px rgba(211, 166, 37, 0.35), 
+				0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+.video-bereich h3{
+	font-size: 1.8rem;
+	color: #d3a625;
+	margin: 0 0 20px;
+}
+
+.hogwarts-video{
+	display: block;
+	width: 100%;
+	max-width: 1000px;
+}
+
+.audio-bereich{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 40px;
+}
+
+audio{
+	width: 100%;
+	max-width: 500px;
+	border-radius: 12px;
+	padding: 8px;
+	background: #1a1a1a;
+	outline: 2px solid #d3a625;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.haeuser-bereich{
+	width: 90%;
+	max-width: 1000px;
+	margin: 60px auto;
+	padding: 0 20px;
+}
+
+.haeuser-bereich h2{
+	margin-bottom: 25px;
+	color: #d3a625;
+	text-align: center;
+	font-size: 2rem;
+}
+
+.slider-box{
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	min-height: 380px;
+	padding: 35px 70px;
+
+	background-color: rgba(20, 20, 20, 0.92);
+	border: 2px solid #d3a625;
+	border-radius: 14px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65);
+}
+
+.haus-slide{
+	display: none;
+	align-items: center;
+	gap: 40px;
+	width: 100%;
+}
+
+.haus-slide.active{
+	display: flex;
+}
+
+.haus-bild-box{
+	flex: 0 0 260px;
+	text-align: center;
+}
+
+.haus-bild-box img{
+	width: 220px;
+	height: auto;
+}
+
+.haus-text{
+	flex: 1;
+	text-align: left;
+}
+
+.haus-text h3{
+	margin: 0 0 15px;
+	color: #d3a625;
+	font-size: 2rem;
+}
+
+.haus-text p{
+	margin: 0;
+	color: #ffffff;
+	line-height: 1.7;
+	font-size: 1.1rem;
+}
+
+.slider-button{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+	width: 45px;
+	height: 45px;
+
+	border: 2px solid #d3a625;
+	border-radius: 50%;
+
+	background-color: rgba(0, 0, 0, 0.75);
+	color: #d3a625;
+
+	font-size: 0.625rem;
+	font-weight: bold;
+	cursor: pointer;
+
+}
+
+.slider-button:hover{
+	background-color: #d3a625;
+	color: #2d0909;
+}
+
+.prev-button{
+	left: 15px;
+}
+
+.next-button{
+	right: 15px;
+}
+
+.slider-punkte{
+	margin-top: 18px;
+	text-align: center;
+}
+
+.punkt{
+	display: inline-block;
+
+	width: 12px;
+	height: 12px;
+	margin: 0 5px;
+
+	background-color: #777777;
+	border-radius: 50%;
+}
+
+.active-punkt{
+	background-color: #d3a625;
+}
+
+.charaktere-bereich{
+	width: 90%;
+	max-width: 1100px;
+	margin: 80px auto;
+}
+
+.charaktere-bereich h2{
+	margin-bottom: 40px;
+	color: #d3a625;
+	font-size: 2rem;
+	text-align: left;
+}
+
+.charakter-artikel{
+	display: flex;
+	align-items: flex-start;
+	gap: 30px;
+
+	width: 80%;
+	margin-bottom: 45px;
+	padding: 25px;
+	/*Box hebt sich vom Hintergrund ab*/
+	border: 2px solid #d3a625;
+	border-left-width: 8px;
+	border-radius: 12px;
+
+	background-color: rgba(20, 20, 20, 0.94);
+	box-shadow: 
+		0 0 25px rgba(211, 166, 37, 0.45),
+		0 12px 30px rgba(0, 0, 0, 0.8);
+	
+	text-align: left;
+}
+
+.charakter-artikel.links{
+	margin-right: auto;
+}
+
+.charakter-artikel.rechts{
+	margin-left: auto;
+	flex-direction: row-reverse;
+}
+
+.charakter-abbildung{
+	margin: 0;
+	flex-shrink: 0;
+}
+
+.charakter-abbildung img{
+	display: block;
+	width: 180px;
+	height: 180px;
+	object-fit: cover;
+
+	border: 2px solid #d3a625;
+	border-radius: 10px;
+}
+
+.charakter-text{
+	flex: 1;
+	text-align: left;
+}
+
+.charakter-text h3{
+	margin: 0 0 14px;
+	color: #d3a625;
+	font-size: 1.8rem;
+}
+
+.charakter-text p{
+	margin: 0;
+	color: #ffffff;
+	line-height: 1.9;
+	font-size: 1rem;
+}
+
+.button-box{
+	width: fit-content;
+	margin: 30px auto;
+}
+
+.pdf-button{
+	display: inline-flex;      
+	align-items: center;       
+	justify-content: center;   
+
+	font-size: 1rem;
+	font-weight: bold;
+	width: 140px;
+	height: 40px;
+	
+	cursor: pointer;
+
+	background-color: #2d0909;
+	color: #d3a625;
+	border: 2px solid #d3a625;
+	border-radius: 10px;
+	text-decoration: none;
+
+	transition: all 0.25s ease;
+}
+
+.pdf-button:hover{
+	background-color: #d3a625;
+	color: #2d0909;
+
+	transform: translateY(-2px);
+	box-shadow: 0 0 18px rgba(211, 166, 37, 0.65);
+}
+
+@media (max-width: 1150px) {
+	.autorin-abbildung {
+		flex-basis: 180px;
+	}
+
+	.hogwarts-bild-box {
+		flex-basis: 300px;
+	}
+
+	.hogwarts-bild {
+		height: 300px;
+	}
+
+	.haus-bild-box {
+		flex-basis: 200px;
+	}
+
+	.autorin-canvas-layout {
+		gap: 30px;
+	}
+
+	#heiligtuemerCanvas {
+		width: 260px;
+		height: 260px;
+	}
 }
