@@ -70,7 +70,7 @@ function drawCard(x, y, symbol, angle) {
     ctx.strokeRect(-27, -35, 54, 70);
 
     // Symbol
-    ctx.fillStyle = (symbol === "♥" || symbol === "♦") ? "#b51f35" : "#1d2925";
+    ctx.fillStyle = (symbol === "♥" || symbol === "♦" ) ? "#b51f35" : "#1d2925";
     ctx.font = "32px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
