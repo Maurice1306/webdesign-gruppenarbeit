@@ -14,7 +14,7 @@ body{
     background-color: #f0f0f0;
 }
 
-header{
+#header{
     text-align: center;
     color: white;
     font-size: 25px;
@@ -53,8 +53,8 @@ header{
     color: #000000;
 }
 
-.k1 { top: 200px;  left: 260px; }
-.k2 { top: 350px;  left: 477px; }
-.k3 { top: 585px; left: 400px; }
-.k4 { top: 585px; left: 100px; }
-.k5 { top: 350px; left: 44px;  }
+.k1 { top: 100px;  left: 260px; }
+.k2 { top: 250px;  left: 477px; }
+.k3 { top: 485px; left: 400px; }
+.k4 { top: 485px; left: 100px; }
+.k5 { top: 250px; left: 44px;  }
